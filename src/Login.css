@@ -1,0 +1,73 @@
+.login-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.login-title {
+  position: absolute;
+  top: 0px; /* Adjust this value as needed to position the title */
+  left: 50%;
+  color: rgb(54, 40, 34);
+  font-size: 35px;
+  transform: translateX(-50%);
+}
+
+.login-card {
+  position: absolute;
+  top: calc(40% + 30px); /* Position the card below the title */
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Set max-width for the card */
+  width: 100%; /* Ensure card fills available width */
+}
+
+  
+
+  
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+  }
+  
+  button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+
+  }
+  
+  p {
+    margin-top: 10px;
+  }
+  
+  p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
