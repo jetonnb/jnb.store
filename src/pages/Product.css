@@ -1,0 +1,206 @@
+/* Modern Product Detail Page Styles */
+
+.product-detail-container {
+  min-height: 100vh;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.product-detail-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-detail-content {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-3xl);
+  box-shadow: var(--shadow-xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  animation: fadeIn var(--transition-slow);
+}
+
+.product-image-section {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+.product-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition-slow);
+  display: block;
+}
+
+.product-detail-image:hover {
+  transform: scale(1.05);
+}
+
+.product-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.product-detail-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.product-detail-price {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.size-selection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.size-label {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.size-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.size-button {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  min-width: 60px;
+}
+
+.size-button:hover {
+  background: var(--bg-secondary);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.size-button.selected {
+  background: var(--primary-gradient);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.add-to-cart-button {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: white;
+  background: var(--primary-gradient);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-lg);
+  margin-top: var(--spacing-md);
+}
+
+.add-to-cart-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2xl);
+}
+
+.add-to-cart-button:active,
+.add-to-cart-button.clicked {
+  transform: scale(0.98);
+}
+
+.product-divider {
+  border: none;
+  border-top: 2px solid var(--bg-tertiary);
+  margin: var(--spacing-lg) 0;
+}
+
+.product-description {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.size-error {
+  color: #e53e3e;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin: 0;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: #fee;
+  border-radius: var(--radius-md);
+  animation: fadeIn var(--transition-fast);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-detail-container {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+  
+  .product-detail-content {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-2xl);
+    gap: var(--spacing-2xl);
+  }
+  
+  .product-detail-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .product-detail-price {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .add-to-cart-button {
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-md) var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-content {
+    padding: var(--spacing-xl);
+  }
+  
+  .product-detail-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .product-detail-price {
+    font-size: var(--font-size-xl);
+  }
+  
+  .size-button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    min-width: 50px;
+  }
+  
+  .add-to-cart-button {
+    width: 100%;
+  }
+}
